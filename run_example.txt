@@ -1,0 +1,1 @@
+./MMN14 Input/ps.as Input/bad_code.as Input/bad_code2.as Input/bad_code3.as Input/bad_example.as Input/example_without_specials.as Input/morechecks.as 2> error.txt 1>output.txt

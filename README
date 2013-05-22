@@ -1,0 +1,16 @@
+MMN14
+=====
+
+In order to build, please run ./makefile
+The file already has executing permissions.
+
+There's an example of run, that could be run
+only after the building is finished, 
+and done by executing ./run_example.txt
+The output for this run can be found:
+Errors in errors.txt
+Output in output.txt
+
+Also the produced files can be found inside Input,
+with the relevant extensions (.ext, .ent, .ob).
+

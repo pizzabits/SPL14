@@ -1,0 +1,244 @@
+Parsing input #1, Input/ps.as
+Parsing '; file ps.as - includes main routine of reversing string "abcdef"'
+Parsing '			.entry		STRADD'
+Parsing '			.entry		MAIN'
+Parsing '			.extern		REVERSE'
+Parsing '			.extern		PRTSTR'
+Parsing '			.extern		COUNT'
+Parsing 'STRADD:			.data		0'
+Parsing 'STR:			.string		"abcdef"'
+Parsing 'LASTCHAR:		.data		0'
+Parsing 'LEN:			.data		0'
+Parsing 'K:			.data		0'
+Parsing ''
+Parsing '; count length of string, print the original string, reverse string, print reversed string.'
+Parsing ''
+Parsing 'MAIN:			lea/0		STR{LEN},STRADD'
+Parsing '			jsr/0		COUNT'
+Parsing '			jsr/0		PRTSTR'
+Parsing '			mov/1/1/0	STRADD{-5},LASTCHAR{r3}'
+Parsing '			mov/1/1/1	STR{7},r7'
+Parsing '			add/0		COUNT{K},r3'
+Parsing '			dec/1/1/1	LASTCHAR{K}'
+Parsing '			inc/0		K'
+Parsing '			jsr/0		REVERSE'
+Parsing '			jsr/0		PRTSTR'
+Parsing '			stop/0'
+resolving label 'STR' index: 0
+found at index 1 of labels. copying addressing values.
+resolving label 'LEN' index: 1
+found at index 3 of labels. copying addressing values.
+resolving label 'STRADD' index: 2
+found at index 0 of labels. copying addressing values.
+resolving label 'COUNT' index: 3
+resolving label 'PRTSTR' index: 4
+resolving label 'STRADD' index: 5
+found at index 0 of labels. copying addressing values.
+resolving label 'LASTCHAR' index: 6
+found at index 2 of labels. copying addressing values.
+resolving label 'STR' index: 7
+found at index 1 of labels. copying addressing values.
+resolving label 'COUNT' index: 8
+resolving label 'K' index: 9
+found at index 4 of labels. copying addressing values.
+resolving label 'LASTCHAR' index: 10
+found at index 2 of labels. copying addressing values.
+resolving label 'K' index: 11
+found at index 4 of labels. copying addressing values.
+resolving label 'K' index: 12
+found at index 4 of labels. copying addressing values.
+resolving label 'REVERSE' index: 13
+resolving label 'PRTSTR' index: 14
+STR	101
+LEN	102
+STRADD	103
+extern COUNT	105
+1221	0000000000
+extern PRTSTR	107
+1223	0000000000
+STRADD	109
+LASTCHAR	111
+STR	113
+extern COUNT	116
+1310	0000000000
+K	117
+LASTCHAR	119
+K	120
+K	122
+extern REVERSE	124
+1330	0000000000
+extern PRTSTR	126
+1332	0000000000
+STRADD	2000
+MAIN	1210
+Parsing input #2, Input/bad_code.as
+Parsing 'ehello: .data     		  7   ,   -57,17   ,		9'
+Parsing '.data     		  7   ,   -57fr,17   ,		9'
+Parsing 'NUMBERS: .data 		  7   ,   -57,17   ,		9'
+Parsing 'STR: .string   		     "abc def"'
+Parsing '       	  .string    			     "abc def"'
+Parsing '	"'
+Parsing 'loop: mov/0			    #-3			   ,r1'
+Parsing 'movi/0    #-3		,	 r1'
+Parsing 'mov 			    #-3,r1'
+Parsing 'mov/      #-3,r2'
+Parsing 'loop: sub/0    #1   , r1'
+Parsing 'mov   #-3, r1'
+Parsing 'loop: sub/0    r2   , r1'
+Parsing 'loop: mov/0   r2Label, r1'
+Parsing 'loop: jmp/1/0/0 END'
+Parsing ''
+Parsing input #3, Input/bad_code2.as
+Parsing '    mov/0 eax,var1'
+Parsing '    cmp/0/1/1 eax,var2'
+Parsing '    jne/1 skip'
+Parsing '    pop/0 eax'
+Parsing '    push jmpAddress'
+Parsing '    skip:'
+Parsing '    ret'
+Parsing 'jumpIfEqual: ENDP'
+Parsing ''
+Parsing '....'
+Parsing ''
+Parsing 'push OFFSET jumpToHere'
+Parsing 'mov eax, 5'
+Parsing 'push eax'
+Parsing 'push/1 eax'
+Parsing 'call jumpIfEqual'
+Parsing input #4, Input/bad_code3.as
+Parsing 'print_int:          ; Breaks number in ax register to print it'
+Parsing '    mov cx, 10'
+Parsing '    mov bx, 0'
+Parsing '    break_num_to_pics:'
+Parsing '        cmp ax, 0'
+Parsing '        je print_all_pics'
+Parsing '        div cx'
+Parsing '        push dx'
+Parsing '        inc bx'
+Parsing '        jmp break_num_to_pics'
+Parsing '    print_all_pics:'
+Parsing '        cmp bx, 0       ; tests if bx is already null'
+Parsing '        je f_end'
+Parsing '        pop ax'
+Parsing '        add ax, 30h'
+Parsing '        call print_char'
+Parsing '        dec bx'
+Parsing '        jmp print_all_pics'
+Parsing ''
+Parsing 'print_char:             ; Function to print single character to      screen'
+Parsing '        mov ah, 0eh     ; Prepare registers to print the character'
+Parsing '        int 10h         ; Call BIOS interrupt'
+Parsing '        ret'
+Parsing ''
+Parsing 'f_end:              ; Return back upon function completion'
+Parsing '    ret'
+Parsing input #5, Input/bad_example.as
+Parsing ';	some comment'
+Parsing '			.entry		STRADD'
+Parsing '			.entry		MAIN'
+Parsing '			.extern 	REVERSE'
+Parsing '			.extern 	PRTSTR'
+Parsing '			.extern 	COUNT'
+Parsing '	STRADD:		.data		0'
+Parsing '	STR:		.string		"abcdef"'
+Parsing '	LASTCHAR:	.data		0'
+Parsing '	LEN:		.data		0'
+Parsing '	K:		.data		0'
+Parsing ''
+Parsing ''
+Parsing ';	another comment'
+Parsing '	MAIN:		lea/1/1/1	STR{r9},STRADD'
+Parsing '			jsr/0		COUNT, r2'
+Parsing '			jsr/0		PRTSTR'
+Parsing '			mov/1/1/0	STRADD{-5}, LASTCHAR{52}'
+Parsing '			mov/1/1/1	STR{7}, r7'
+Parsing '			add/0		COUNT{K},r3'
+Parsing '			dec/1/1/1	LASd3{K}'
+Parsing '			inc/0		K543Fd#'
+Parsing '			jsr/0		REVERSE'
+Parsing '			jsr/0		PRTSTR'
+Parsing '			stop/0'
+Parsing input #6, Input/example_without_specials.as
+Parsing 'MAIN:	mov/0		LENGTH, r1'
+Parsing '	lea/1/1/1	STR{LENGTH},   r4'
+Parsing 'LOOP:	jmp/1/0/0	END'
+Parsing '	prn/1/1/0   	STR{r3}'
+Parsing '	sub/0		#1, 	r1'
+Parsing '	inc/0		r0'
+Parsing '	mov/0		r3,STR{7}'
+Parsing '	bne/0		LOOP'
+Parsing 'END:	stop/0'
+Parsing 'STR:	.string 	"abcdef"'
+Parsing 'LENGTH:	.data		6'
+Parsing 'K:	.data		2'
+resolving label 'LENGTH' index: 0
+found at index 4 of labels. copying addressing values.
+resolving label 'STR' index: 1
+found at index 3 of labels. copying addressing values.
+resolving label 'LENGTH' index: 2
+found at index 4 of labels. copying addressing values.
+resolving label 'END' index: 3
+found at index 2 of labels. copying addressing values.
+resolving label 'STR' index: 4
+found at index 3 of labels. copying addressing values.
+resolving label 'STR' index: 5
+found at index 3 of labels. copying addressing values.
+resolving label 'LOOP' index: 6
+found at index 1 of labels. copying addressing values.
+LENGTH	101
+STR	103
+LENGTH	104
+END	106
+STR	108
+STR	113
+LOOP	116
+Parsing input #7, Input/morechecks.as
+Parsing 'MAIN:		mov/0		LENGTH, r1'
+Parsing '		lea/1/1/1	STR{LENGTH}, r4'
+Parsing 'LOOP:		jmp/1/0/0	END'
+Parsing '		prn/1/1/0	STR{r3}'
+Parsing '		sub/0		#1, r1'
+Parsing '		inc/0		r0'
+Parsing '		mov/0		r3,STR{7}'
+Parsing '		bne/0		LOOP'
+Parsing 'END:		stop/0'
+Parsing ''
+Parsing 'STR:		.string 	"abcdef"'
+Parsing 'LENGTH:		.data 		6'
+Parsing 'K:		.data 		2'
+Parsing ''
+Parsing '; some more definitions'
+Parsing '    '
+Parsing '    		.data 		1'
+Parsing '    		.data 		+1 '
+Parsing '    		.data 		-1 '
+Parsing '    		.data 		1, 2 '
+Parsing '    		.data 		1 ,2  '
+Parsing '    		.data 		1 ,   2'
+Parsing '    		.data 		1 , -2, +13, 12352534 ,00'
+Parsing '    '
+Parsing '		.string     	"asd" '
+Parsing '		.string     	"asbd asd asdkl qwe"    '
+Parsing '		.string     	"asd ' asdasd ' asd"'
+Parsing '; bad quotation commas'
+Parsing '		.string 	"asdd "asdasd"asdadd "'
+Parsing '		.string 	"asdd \r\0\rdasd"asdadd "'
+Parsing ''
+Parsing '; some more commands'
+Parsing ''
+Parsing '		mov/0   	r3, r4'
+Parsing ''
+Parsing 'Z:  		mov/0 		STR, r1'
+Parsing 'AS: 		mov/1/0/0 	R1,r1'
+Parsing 'R1: 		sub/1/1/1 	r1    ,r2'
+Parsing '    		stop/0'
+Parsing '    		bne/1/1/0 	LOOP       '
+Parsing '    '
+Parsing '    '
+Parsing '; correct addressing'
+Parsing ''
+Parsing '		cmp/0 		#1, #2'
+Parsing '		cmp/0 		AS{Z}, R1{K}'
+Parsing '		prn/0 		#1'
+Parsing '		jsr/0   	END'
+DONE.

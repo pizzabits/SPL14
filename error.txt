@@ -1,0 +1,55 @@
+Input/bad_code.as:2: error: .data definition contains a value which is not a number.
+Input/bad_code.as:6: error: Cannot find an opcode type character!
+Input/bad_code.as:6: error: Expected number but got not a number.
+Input/bad_code.as:8: error: unknown opcode
+Input/bad_code.as:9: error: Cannot find an opcode type character!
+Input/bad_code.as:10: error: Wrong type preceding opcode. expected 0 or 1
+Input/bad_code.as:12: error: Cannot find an opcode type character!
+Input/bad_code2.as:2: error: Too many addressing properties.
+Input/bad_code2.as:2: error: Expected register number, got not a number.
+Input/bad_code2.as:3: error: unknown opcode
+Input/bad_code2.as:4: error: unknown opcode
+Input/bad_code2.as:5: error: Cannot find an opcode type character!
+Input/bad_code2.as:6: error: End of line unexpected!
+Input/bad_code2.as:7: error: Cannot find an opcode type character!
+Input/bad_code2.as:8: error: Cannot find an opcode type character!
+Input/bad_code2.as:10: error: Cannot find an opcode type character!
+Input/bad_code2.as:12: error: Cannot find an opcode type character!
+Input/bad_code2.as:13: error: Cannot find an opcode type character!
+Input/bad_code2.as:14: error: Cannot find an opcode type character!
+Input/bad_code2.as:15: error: unknown opcode
+Input/bad_code2.as:16: error: Cannot find an opcode type character!
+Input/bad_code3.as:1: error: Cannot find an opcode type character!
+Input/bad_code3.as:1: error: Either the label is too long or contains bad characters.
+Input/bad_code3.as:2: error: Cannot find an opcode type character!
+Input/bad_code3.as:3: error: Cannot find an opcode type character!
+Input/bad_code3.as:4: error: Cannot find an opcode type character!
+Input/bad_code3.as:4: error: Either the label is too long or contains bad characters.
+Input/bad_code3.as:5: error: Cannot find an opcode type character!
+Input/bad_code3.as:6: error: Cannot find an opcode type character!
+Input/bad_code3.as:7: error: Cannot find an opcode type character!
+Input/bad_code3.as:8: error: Cannot find an opcode type character!
+Input/bad_code3.as:9: error: Cannot find an opcode type character!
+Input/bad_code3.as:10: error: Cannot find an opcode type character!
+Input/bad_code3.as:11: error: Cannot find an opcode type character!
+Input/bad_code3.as:11: error: Either the label is too long or contains bad characters.
+Input/bad_code3.as:12: error: Cannot find an opcode type character!
+Input/bad_code3.as:13: error: Cannot find an opcode type character!
+Input/bad_code3.as:14: error: Cannot find an opcode type character!
+Input/bad_code3.as:15: error: Cannot find an opcode type character!
+Input/bad_code3.as:16: error: Cannot find an opcode type character!
+Input/bad_code3.as:17: error: Cannot find an opcode type character!
+Input/bad_code3.as:18: error: Cannot find an opcode type character!
+Input/bad_code3.as:20: error: Cannot find an opcode type character!
+Input/bad_code3.as:20: error: Either the label is too long or contains bad characters.
+Input/bad_code3.as:21: error: Cannot find an opcode type character!
+Input/bad_code3.as:22: error: Cannot find an opcode type character!
+Input/bad_code3.as:23: error: Cannot find an opcode type character!
+Input/bad_code3.as:25: error: Cannot find an opcode type character!
+Input/bad_code3.as:25: error: Either the label is too long or contains bad characters.
+Input/bad_code3.as:26: error: Cannot find an opcode type character!
+Input/bad_example.as:16: error: Expected end of line.
+Input/bad_example.as:16: error: Expected number but got not a number.
+Input/bad_example.as:22: error: Either the label is too long or contains bad characters.
+Input/morechecks.as:29: error: Expected end of line.
+Input/morechecks.as:30: error: Expected end of line.
